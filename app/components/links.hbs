@@ -1,0 +1,7 @@
+<ul>
+  {{#each @links as |link|}}
+    <li>
+      <LinkTo @route="page" @model={{link.id}}>{{link.text}}</LinkTo>
+    </li>
+  {{/each}}
+</ul>
