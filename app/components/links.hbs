@@ -1,7 +1,14 @@
 <ul>
   {{#each @links as |link|}}
     <li>
-      <LinkTo @route="page" @model={{link.id}}>{{link.text}}</LinkTo>
+      <LinkTo
+        @route="page"
+        @model={{link.id}}
+        id="link-{{link.id}}"
+        {{on "click" this.storeFocusedElementId}}
+      >
+        {{link.text}}
+      </LinkTo>
     </li>
   {{/each}}
 </ul>

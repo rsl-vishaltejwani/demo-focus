@@ -1,3 +1,7 @@
-<LinkTo @route="index">
-  Back
+<LinkTo
+  @route="index"
+  id="back-link"
+  {{autofocus-back this.focusTracker.shouldBackButtonGetFocus}}
+>
+  Back to Index
 </LinkTo>
